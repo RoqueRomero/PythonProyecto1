@@ -23,5 +23,8 @@ from myapp import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('saludo/',saludo),
-    path("inicio/",views.index,name="index")
+    path("inicio/",views.index,name="index"),
+    path("alta/",views.alta,name="alta"),
+    path("modifica/",views.modifica,name="modifica"),
+    path("elimina/",views.elimina,name="elimina"),
 ]
