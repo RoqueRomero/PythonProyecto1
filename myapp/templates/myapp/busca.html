@@ -11,8 +11,14 @@
     <h2>Buscar</h2>
     <p>{{ mensaje }}</p>
 </center>
-<br>
-<br>
 <a href="/inicio/"><--Volver</a>
+<br>
+<br>
+
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }} 
+</form>
+
 </body>
 </html>

@@ -10,18 +10,17 @@
     <h1 >Mi aplicación Django</h1>
     <h2>Lista de Estudiantes</h2>
 </center>   
-
-<article>
+<a href="/inicio/"><--Volver</a>
+<br>
+<br>
 {% for Estudiante in Estudiantes%}
+<article style="border:solid 1px">
 <p>{{Estudiante.apellido}}</p>
 <p>{{Estudiante.nombres}}</p>
 <p>{{Estudiante.materia}}</p>
 <p>{{Estudiante.comision}}</p>
-{% endfor %}
 </article>
+{% endfor %}
 
-<br>
-<br>
-<a href="/inicio/"><--Volver</a>
 </body>
 </html>

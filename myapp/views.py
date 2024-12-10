@@ -1,4 +1,4 @@
-from django.shortcuts import redirect,render
+from django.shortcuts import get_object_or_404,render
 from .forms import formulario
 from myapp.models import Estudiante
 
@@ -28,6 +28,9 @@ def lista(request):
     return render(request,"myapp/lista.html",context)
 
 
-def busca(request):
-    context={"mensaje":"Ingrese nro. a buscar"}
+def busca(request,pk):
+    Estudiantes=get_object_or_404(Estudiante,id=pk) 
+    if request.method=='GET':
+        form=formulario(instance=Estudiantes) 
+        context={"form":form}
     return render(request,"myapp/busca.html",context)

@@ -26,6 +26,6 @@ urlpatterns = [
     path("inicio/",views.index,name="index"),
     path("alta/",views.alta,name="alta"),
     path("lista/",views.lista,name="lista"),
-    path("busca/",views.busca,name="busca"),
+    path("busca/<int:pk>",views.busca,name="busca"),
     
 ]
