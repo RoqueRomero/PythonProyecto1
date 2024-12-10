@@ -3,14 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modifica</title>
+    <title>Listado</title>
 </head>
 <body>
 <center>
     <h1 >Mi aplicación Django</h1>
-    <h2>Modifica</h2>
-    <p>{{ mensaje }}</p>
+    <h2>Lista de Estudiantes</h2>
 </center>   
+
+<article>
+{% for Estudiante in Estudiantes%}
+<p>{{Estudiante.apellido}}</p>
+<p>{{Estudiante.nombres}}</p>
+<p>{{Estudiante.materia}}</p>
+<p>{{Estudiante.comision}}</p>
+{% endfor %}
+</article>
+
 <br>
 <br>
 <a href="/inicio/"><--Volver</a>
